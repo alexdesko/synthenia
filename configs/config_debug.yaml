@@ -1,0 +1,47 @@
+# GENERAL
+debug: True
+datadir: ./data/synthetic
+logdir: ./logs
+
+# WANDB
+project: NIA
+name: example # Suffix _DEBUG will be added if debug is True
+
+
+## EXPERIMENT
+n_iter: 100000 # Will be set to 5000 if debug is True
+batch_size: 4096
+lossfunc: l1
+lr: 5.e-4
+log_every_train: 500
+log_every_val: 2000
+
+# Regularization
+reg_densities: True
+reg_type_densities: Both
+## Only applicable if TV
+l_densities_TV: 0.5
+## Only applicable if NLM
+l_densities_NLM: .5
+sigma: .1
+patch_size: 5
+patch_rand: False
+threshold: 0.1
+## if alpha is -1, then regular norm is used instead of weighted norm
+alpha: -1
+
+reg_densities_3D: False
+reg_type_densities_3D: NLM
+l_densities_3D: 0.1
+sigma_3D: .1
+patch_size_3D: 5 ##will lead to a cube with n^3 points!!
+
+# Raysampler
+n_samples_per_ray: 128
+min_depth: .5
+max_depth: 3.5
+randomized: True
+
+# Density field
+net_feature_dim: 256
+n_encoding_func: 6

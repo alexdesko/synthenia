@@ -1,0 +1,10 @@
+matplotlib==3.8.1
+numpy==1.26.1
+Pillow==10.1.0
+PyYAML==6.0.1
+scikit-image==0.22.0
+torch==2.1.0
+torchvision==0.16.0
+tqdm==4.66.1
+trimesh==4.0.2
+wandb==0.15.12
